@@ -28,16 +28,16 @@
 						<h4 class="mb-1"><strong>{{anews.title}}</strong></h4>
 						<small class="text-muted">{{anews.update}}</small>
 					</div>
-					<div class="collapse" id="aaa">
+					<div class="collapse" :id="'a'+anews.id">
 						<p class="mb-1" v-html="anews.content"></p>
 					</div>
 					<div class="d-flex w-100 justify-content-between">
-						<small class="text-muted">edit by {{anews.author}} </small>
-						<a data-toggle="collapse" href="#aaa" @click="flag0=!flag0">{{flag0?"阅读":"收起"}}</a>
+						<small class="text-muted">edited by {{anews.author}} </small>
+						<a data-toggle="collapse" :href="'#a'+anews.id"  @click="flag0=!flag0">{{flag0?"阅读":"收起"}}</a>
 					</div>
 				</div>
 			</template>
 		</div>
 	</body>
-	<script src="../dist/bundle.js"></script>
+	<script src="/bundle.js"></script>
 </html>
